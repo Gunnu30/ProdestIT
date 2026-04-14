@@ -1,14 +1,9 @@
 let buttonEl = document.getElementById("toggleButtonId");
 
 buttonEl.addEventListener("click", () => {
-    if (buttonEl.textContent === "Light") {
-        buttonEl.textContent = "Dark";
-        buttonEl.style.color = "#212121";           
-        buttonEl.style.backgroundColor = "#ffffff"; 
-    } else {
-        buttonEl.textContent = "Light";
-        buttonEl.style.color = "#ffffff";           
-        buttonEl.style.backgroundColor = "#212121"; 
-    }
-    document.body.classList.toggle('theme-dark');
+   document.documentElement.classList.toggle('dark');
+    
+    // Just update the button text so the user knows what happened
+    const isDark = document.documentElement.classList.contains('dark');
+    buttonEl.textContent = isDark ? "Dark" : "Light";
 });

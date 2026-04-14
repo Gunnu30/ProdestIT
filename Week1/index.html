@@ -3,72 +3,92 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <meta name="description" content="Prodesk IT is a leading digital agency specializing in web development, SEO, and strategic marketing.">
         <link rel="stylesheet"  href="index.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+        </script>
         <title>Prodesk IT | Digital Agency</title>
     </head>
-    <body>
-        <nav class="col-12 nav-container">
-            <div class="logo">
+    <body class="bg-white text-black dark:bg-[#121212] dark:text-white">
+        <nav class="flex flex-row w-full justify-between items-center sticky top-0 px-6 h-[70px] bg-gray backdrop-blur-md dark:bg-white/50 bg-gray-700/40 ">
+            <div class="font-bold text-2xl cursor-pointer">
                 Prodesk Id
             </div>
-            <div class="right-nav-contaienr">
-                <button class="toggle-button" id="toggleButtonId">Light</button>
-                <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-                <label for="menu-toggle" class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+            <div class="flex items-center">
+                <button class="bg-[#212121] p-2 text-[#ffffff] cursor-pointer mr-3 rounded-md
+               transition-all duration-300 
+               hover:scale-[1.05]
+               hover:shadow-[0_2px_8px_rgba(0,0,0,0.15)]" id="toggleButtonId">Light</button>
+                <input type="checkbox" id="menu-toggle" class="hidden peer" />
+                <label for="menu-toggle" class="md:hidden">
+                    <span class="block dark:bg-white bg-[#333] mb-1 w-[30px] h-[3px]"></span>
+                    <span class="block dark:bg-white bg-[#333] mb-1 w-[30px] h-[3px]"></span>
+                    <span class="block dark:bg-white bg-[#333] mb-1 w-[30px] h-[3px]"></span>
                 </label> 
-
-                <ul class="nav-links">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="">Contact</a></li>
+                <ul class="hidden peer-checked:flex md:flex 
+                    absolute md:static left-0
+                    md:w-auto
+                    top-[70px] w-screen
+                    flex-col md:flex-row 
+                    items-center gap-3 
+                    py-5 md:py-0 
+                    sm:bg-gray sm:backdrop-blur-md sm:dark:bg-white/50 sm:bg-gray-700/40
+                    dark:bg-white/50 bg-gray-700/40 backdrop-blur-md 
+                    md:bg-transparent md:backdrop-blur-none md:dark:bg-transparent
+           shadow-lg md:shadow-none cursor-pointer ">
+                    <li><a class="hover:shadow-[0_2px_6px_2px_#939393] p-2 rounded-md" href="">Home</a></li>
+                    <li><a class="hover:shadow-[0_2px_6px_2px_#939393] p-2">About</a></li>
+                    <li><a class="hover:shadow-[0_2px_6px_2px_#939393] p-2" href="#services">Services</a></li>
+                    <li><a class="hover:shadow-[0_2px_6px_2px_#939393] p-2" href="">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <header class="hero">
-            <div class="hero-content">
-                <h1>Elevate Your Brand with Digital Excellence</h1>
-                <p>We craft high-performance websites and seamless digital experiences for your business.</p>
-                <button>Get Started</button>
+        <header class="h-screen w-screen flex flex-row justify-center items-center mb-0">
+            <div class="flex flex-col text-center justify-center items-center gap-3 bg-transparent dark:bg-transparent">
+                <h1 class="font-bold text-5xl">Elevate Your Brand with Digital Excellence</h1>
+                <p class="mb-2">We craft high-performance websites and seamless digital experiences for your business.</p>
+                <button class="p-2 rounded-md border-0 text-[#ffffff] bg-[#2b86b7] hover:bg-[#065986]">Get Started</button>
             </div>
         </header>
-        <section class="services-container" id="services">
-            <div class="services-header">
-                <h2>Our Services</h2>
-                <p>Providing cutting-edge solutions for your digital needs.</p>
+        <section class="flex flex-col justify-center items-center text-center h-[100vh] mt-0" id="services">
+            <div class="flex flex-col gap-2 mb-2">
+                <h2 class="font-bold text-6xl">Our Services</h2>
+                <p class="text-xl">Providing cutting-edge solutions for your digital needs.</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon">💻</div>
-                    <h3>Web Development</h3>
+            <div class="flex md:flex-row flex-col gap-2 p-2 w-full mt-2 bg-gray-50	dark:bg-[#1e1e1e]">
+                <div class="flex flex-col justify-between hover:shadow-[0px_4px_4px_4px_#6fb72c] p-8 rounded-lg transition-transform duration-300 hover:translate-y-[10px]">
+                    <div class="text-2xl">💻</div>
+                    <h3 class="font-bold text-xl">Web Development</h3>
                     <p>High-performance MERN stack applications tailored to your business.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="icon">🚀</div>
-                    <h3>SEO Optimization</h3>
+                <div class="flex flex-col justify-between hover:shadow-[0px_4px_4px_4px_#6fb72c] p-8 rounded-lg transition-transform duration-300 hover:translate-y-[10px]">
+                    <div class="tex">🚀</div>
+                    <h3 class="font-bold text-xl">SEO Optimization</h3>
                     <p>Boosting your visibility to ensure your brand reaches the right audience.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="icon">📈</div> <h3>Marketing</h3>
+                <div class="flex flex-col justify-between hover:shadow-[0px_4px_4px_4px_#6fb72c] p-8 rounded-lg transition-transform duration-300 hover:translate-y-[10px]">
+                    <div class="text-2xl">📈</div>
+                     <h3 class="font-bold text-xl">Marketing</h3>
                     <p>Strategic digital marketing to grow your brand and reach your target audience effectively.</p>
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="footer-content">
+        <footer class="flex flex-col text-white w-screen h-[150px] bg-[#212121] justify-center items-center">
+            <div class="flex flex-col md:flex-row justify-center md:justify-between w-full items-center">
                 <p>&copy; 2026 Prodesk IT. All rights reserved.</p>
-                <div class="social-icons">
-                    <a href="http://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="http://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="http://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="http://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <div class="flex gap-5 mt-4">
+                    <a href="http://facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="http://twitter.com" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="http://linkedin.com" aria-label="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="http://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </footer>
